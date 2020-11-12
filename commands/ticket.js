@@ -61,7 +61,7 @@ module.exports.run = async (bot, message, args) => {
                     var embedParent = new discord.MessageEmbed()
                         .setTitle(`Hallo ${message.author.username},`)
                         .setDescription("Hoi, zou je kunnen uitleggen waar we je mee kunnen helpen? Dan komen we je zo snel mogelijk helpen!")
-                        .setColor("#ff0000")
+                        .setColor("#0074FF")
 
                     settedParent.send(embedParent);
 
