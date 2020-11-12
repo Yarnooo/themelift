@@ -1,0 +1,31 @@
+{
+  "name": "discord_bot",
+  "version": "1.0.0",
+  "description": "Discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "keywords": [
+    "bot",
+    "walibi"
+  ],
+  "author": "Yarno",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yarnooo/projectwalibi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Yarnooo/projectwalibi/issues"
+  },
+  "homepage": "https://github.com/Yarnooo/projectwalibi#readme"
+}
