@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
     const categoryID = "776469391189213216";
 
-    if (!message.member.hasPermission("SEND_MESSAGES")) return message.reply("❌ | Je hebt niet de juiste rechten!");
+    if (!message.member.hasPermission("SEND_MESSAGES")) return message.reply("❌ | Je hebt niet de juiste rechten, " + user.author.username);
 
     if (message.channel.parentID == categoryID) {
         message.channel.delete();
@@ -12,8 +12,8 @@ module.exports.run = async (bot, message, args) => {
         // create embed
         var embedCreateTicket = new discord.MessageEmbed()
             .setTitle("Ticket, " + message.channel.name)
-            .setColor("#ff0000")
-            .setDescription("De ticket is succesvol afgerond.\nGesloten door: " + message.author.username)
+            .setColor("#0074FF")
+            .setDescription("De ticket is gesloten.\nGesloten door: " + message.author.username)
             .setFooter("De ticket is gesloten.")
             .setTimestamp()
 
