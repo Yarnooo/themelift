@@ -2,9 +2,9 @@ const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    const categoryID = "719469933146406972";
+    const categoryID = "776469391189213216";
 
-    if (!message.member.hasPermission("SEND_MESSAGES")) return message.reply("Je hebt niet de juiste rechten!");
+    if (!message.member.hasPermission("SEND_MESSAGES")) return message.reply(`❌ | ${member}, je hebt niet de juiste rechten!`);
 
     if (message.channel.parentID == categoryID) {
         message.channel.delete();

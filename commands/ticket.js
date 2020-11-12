@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    const categoryID = "719469933146406972";
+    const categoryID = "776469391189213216";
 
     var userName = message.author.username;
     var userDiscriminator = message.author.discriminator;
@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
         if (channel.name == userName.toLowerCase() + "-" + userDiscriminator) {
             ticketBestaat = true;
 
-            message.reply("❌ | Je hebt al een ticket!");
+            message.reply(`❌ | ${member}, je hebt al een ticket!`);
 
             return;
         }
@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
 
     var embed = new discord.MessageEmbed()
         .setTitle(`Hallo ${message.author.username},`)
-        .setDescription("✅ | Je ticket is succesvol aangemaakt!")
+        .setDescription(`✅ | ${member}, je ticket is succesvol aangemaakt!`)
         .setColor("#ff0000");
 
     message.channel.send(embed);
@@ -40,7 +40,7 @@ module.exports.run = async (bot, message, args) => {
                         VIEW_CHANNEL: false
                     });
 
-                    settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.id === '722459793184522286'), {
+                    settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.id === '776372715446730755'), {
                         SEND_MESSAGES: true,
                         VIEW_CHANNEL: true,
                         READ_MESSAGES: true,
@@ -60,7 +60,7 @@ module.exports.run = async (bot, message, args) => {
 
                     var embedParent = new discord.MessageEmbed()
                         .setTitle(`Hallo ${message.author.username},`)
-                        .setDescription("Zou je alvast kunnen uitleggen waar we je mee kunnen helpen? Dan komt ons Support team je zo snel mogelijk helpen!")
+                        .setDescription(`Hoi ${member}, zou je kunnen uitleggen waar we je mee kunnen helpen? Dan komen we je zo snel mogelijk helpen!`)
                         .setColor("#ff0000")
 
                     settedParent.send(embedParent);
