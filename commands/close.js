@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
     const categoryID = "776469391189213216";
 
-    if (!message.member.hasPermission("SEND_MESSAGES")) return message.reply("❌ | Je hebt niet de juiste rechten, " + user.author.username);
+    if (!message.member.hasPermission("SEND_MESSAGES")) return message.reply("❌ | Je hebt niet de juiste rechten!");
 
     if (message.channel.parentID == categoryID) {
         message.channel.delete();

@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
         if (channel.name == userName.toLowerCase() + "-" + userDiscriminator) {
             ticketBestaat = true;
 
-            message.reply("❌ | Je hebt al een ticket, " + user.author.username);
+            message.reply("❌ | Je hebt al een ticket!");
 
             return;
         }
@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
 
     var embed = new discord.MessageEmbed()
         .setTitle(`Hallo ${message.author.username},`)
-        .setDescription("✅ | Je ticket is succesvol aangemaakt, " + message.autor.username)
+        .setDescription("✅ | Je ticket is succesvol aangemaakt!")
         .setColor("#0074FF");
 
     message.channel.send(embed);
