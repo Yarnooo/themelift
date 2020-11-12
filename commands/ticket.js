@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
         if (channel.name == userName.toLowerCase() + "-" + userDiscriminator) {
             ticketBestaat = true;
 
-            message.reply(`❌ | ${member}, je hebt al een ticket!`);
+            message.reply("❌ | Je hebt al een ticket!");
 
             return;
         }
@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
 
     var embed = new discord.MessageEmbed()
         .setTitle(`Hallo ${message.author.username},`)
-        .setDescription(`✅ | ${member}, je ticket is succesvol aangemaakt!`)
+        .setDescription("✅ | Je ticket is succesvol aangemaakt!")
         .setColor("#ff0000");
 
     message.channel.send(embed);
@@ -60,7 +60,7 @@ module.exports.run = async (bot, message, args) => {
 
                     var embedParent = new discord.MessageEmbed()
                         .setTitle(`Hallo ${message.author.username},`)
-                        .setDescription(`Hoi ${member}, zou je kunnen uitleggen waar we je mee kunnen helpen? Dan komen we je zo snel mogelijk helpen!`)
+                        .setDescription("Hoi, zou je kunnen uitleggen waar we je mee kunnen helpen? Dan komen we je zo snel mogelijk helpen!")
                         .setColor("#ff0000")
 
                     settedParent.send(embedParent);
